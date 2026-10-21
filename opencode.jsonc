@@ -1,0 +1,91 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model" : "ecom/deepseek-v4-flash",
+  "provider": {
+    "ecom-deepseek": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "ecom/deepseek",
+      "options": {
+        "baseURL": "https://llm-core-olap.samokat.ru/",
+        "apiKey": "{env:DEEPSEEK_API_KEY}"
+      },
+      "models": {
+        "deepseek-v4-flash": {
+          "name": "deepseek-v4-flash"
+        }
+      }
+    },
+//  },
+//  "provider": {
+    "ecom-glm": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "ecom/glm",
+      "options": {
+        "baseURL": "https://llm-core-olap.samokat.ru/",
+        "apiKey": "{env:GLM_API_KEY}"
+      },
+      "models": {
+        "glm-5.3-flash": {
+          "name": "glm-5.3-flash"
+        }
+      }
+    }
+  },
+  "permission": {
+      "external_directory": {
+          "~/Documents/opencode/skills/**": "allow"
+      },
+      "edit": {
+          "~/Documents/opencode/skills/**": "deny"
+      },
+      "read" : {
+          "**.env*" : "deny",
+          "*" : "ask",
+          "**.md" : "allow",
+          "**.py" : "allow",
+          "**.sql" : "allow"
+      },
+      "bash": {
+          "*": "ask"
+      } ,
+    // Atlassian (confluence, jira)
+    "atlassian_jira_*": "ask",
+    "atlassian_jira_get_*": "allow",
+    "atlassian_jira_search*": "allow",
+    //
+    // DWH
+    // Greenplum
+    "dwh_gp_query_run" : "ask",
+    "dwh_gp_query_test" : "allow",
+    "dwh_gp_table_ddl" : "allow",
+    "dwh_gp_schema_tables" : "allow",
+    "dwh_gp_connections" : "allow",
+    //
+    // Clickhouse
+    "dwh_ch_query_run" : "ask",
+    "dwh_ch_query_test" : "allow",
+    "dwh_ch_table_ddl" : "allow",
+    "dwh_ch_schema_tables" : "allow",
+    "dwh_ch_connections" : "allow"
+  },
+    "mcp": {
+    "atlassian": {
+      "type": "local",
+      "command": ["uvx", "mcp-atlassian==0.21.1"],
+      "environment": {
+        "JIRA_URL": "https://project.samokat.ru",
+        "JIRA_PERSONAL_TOKEN": "{env:JIRA_PERSONAL_TOKEN}",
+
+        "CONFLUENCE_URL": "https://space.samokat.ru",
+        "CONFLUENCE_PERSONAL_TOKEN": "{env:CONFLUENCE_PERSONAL_TOKEN}",
+        "READ_ONLY_MODE": "true"
+        }
+      }, 
+    "dwh": {
+      "type": "local",
+      // "command": ["/Users/hq-fvfkjlu11wfv/Desktop/mcp/work-opencode-skills/.venv/bin/dwh-mcp"],
+      "command": ["/Users/hq-fvfkjlu11wfv/Desktop/mcp/work-opencode-skills/.venv/bin/dwh-mcp"],
+      "enabled": true
+    }
+  }
+}
