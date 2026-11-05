@@ -84,7 +84,7 @@
     "dwh": {
       "type": "local",
       // "command": ["/Users/hq-fvfkjlu11wfv/Desktop/mcp/work-opencode-skills/.venv/bin/dwh-mcp"],
-      "command": ["{env:OPENCODE_SETUP_DIR}/work-opencode-setup/work-opencode-skills/.venv/bin/dwh-mcp"],
+      "command": ["{env:OPENCODE_SETUP_DIR}/work-opencode-skills/.venv/bin/dwh-mcp"],
       "enabled": true
     }
   }
