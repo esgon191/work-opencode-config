@@ -31,9 +31,12 @@
       }
     }
   },
+  "skills": {
+      "
+  },
   "permission": {
-      "external_directory": {
-          "~/Documents/opencode/skills/**": "allow"
+      "skill": {
+          "datacatalog-*": "deny"
       },
       "edit": {
           "~/Documents/opencode/skills/**": "deny"
