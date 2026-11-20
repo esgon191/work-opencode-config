@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model" : "ecom/deepseek-v4-flash",
+  "model" : "ecom/deepseek-v4.1-flash",
   "provider": {
     "ecom-deepseek": {
       "npm": "@ai-sdk/openai-compatible",
@@ -10,8 +10,8 @@
         "apiKey": "{env:DEEPSEEK_API_KEY}"
       },
       "models": {
-        "deepseek-v4-flash": {
-          "name": "deepseek-v4-flash"
+        "deepseek-v4.1-flash": {
+          "name": "deepseek-v4.1-flash"
         }
       }
     },
@@ -31,12 +31,9 @@
       }
     }
   },
-  "skills": {
-      "
-  },
   "permission": {
-      "skill": {
-          "datacatalog-*": "deny"
+      "external_directory": {
+          "~/Documents/opencode/skills/**": "allow"
       },
       "edit": {
           "~/Documents/opencode/skills/**": "deny"
@@ -83,19 +80,12 @@
         "CONFLUENCE_PERSONAL_TOKEN": "{env:CONFLUENCE_PERSONAL_TOKEN}",
         "READ_ONLY_MODE": "true"
         }
-      },
+      }, 
     "dwh": {
       "type": "local",
       // "command": ["/Users/hq-fvfkjlu11wfv/Desktop/mcp/work-opencode-skills/.venv/bin/dwh-mcp"],
       "command": ["{env:OPENCODE_SETUP_DIR}/work-opencode-skills/.venv/bin/dwh-mcp"],
       "enabled": true
-    },
-    //"rag-code-oper-smkt" {
-    "rag-code-oper-smkt": {
-        "type": "remote",
-        "url": "https://llm-core-olap.samokat.ru/rag_rag_code_oper_smkt/mcp",
-        "oauth": false,
-        "headers": {"Authorization": "Bearer {env:RAG_CODE_OPER_SMKT_API_KEY}"}
     }
   }
 }
