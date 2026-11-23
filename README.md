@@ -17,4 +17,10 @@ export GLM_API_KEY=
 ```sh
 export JIRA_PERSONAL_TOKEN= 
 export CONFLUENCE_PERSONAL_TOKEN= 
+export LITELLM_API_KEY="<ключ LiteLLM>"
 ```
+
+`LITELLM_API_KEY` нужен для подключения к RAG через LiteLLM. Отдельный токен RAG
+задавать не требуется: он скрыт внутри LiteLLM. В OpenCode инструменты
+`rag-code-oper-smkt_*` разрешены только сабагенту `searcher`; для остальных агентов
+они отключены глобально в `opencode.jsonc`. Не добавляй реальные токены в репозиторий.

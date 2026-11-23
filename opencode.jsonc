@@ -68,7 +68,11 @@
     "dwh_ch_schema_tables" : "allow",
     "dwh_ch_connections" : "allow"
   },
-    "mcp": {
+  "tools": {
+    // RAG доступен только агенту searcher (см. agents/searcher.md)
+    "rag-code-oper-smkt_*": false
+  },
+  "mcp": {
     "atlassian": {
       "type": "local",
       "command": ["uvx", "mcp-atlassian==0.21.1"],
@@ -79,13 +83,22 @@
         "CONFLUENCE_URL": "https://space.samokat.ru",
         "CONFLUENCE_PERSONAL_TOKEN": "{env:CONFLUENCE_PERSONAL_TOKEN}",
         "READ_ONLY_MODE": "true"
-        }
-      }, 
+      }
+    },
     "dwh": {
       "type": "local",
       // "command": ["/Users/hq-fvfkjlu11wfv/Desktop/mcp/work-opencode-skills/.venv/bin/dwh-mcp"],
       "command": ["{env:OPENCODE_SETUP_DIR}/work-opencode-skills/.venv/bin/dwh-mcp"],
       "enabled": true
+    },
+    "rag-code-oper-smkt": {
+      "type": "remote",
+      "url": "https://llm-core-olap.samokat.ru/rag_rag_code_oper_smkt/mcp",
+      "enabled": true,
+      "oauth": false,
+      "headers": {
+        "x-litellm-api-key": "{env:LITELLM_API_KEY}"
+      }
     }
   }
 }

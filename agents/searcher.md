@@ -11,7 +11,7 @@ tools:
     edit: false
     bash: false
     atlassian: true
-    rag-code-oper-smkt: true
+    "rag-code-oper-smkt_*": true
     "datacatalog-*": true
     "dwh*": false
 # Получение DDL таблицы
