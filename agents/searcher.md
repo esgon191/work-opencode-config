@@ -6,6 +6,8 @@ temprature: 0.1
 permission:
     skill:
         "datacatalog-*": allow
+    "dwh_gp_query_run": deny
+    "dwh_ch_query_run": deny
 tools:  
     task: false
     write: false

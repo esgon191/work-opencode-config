@@ -10,6 +10,8 @@ permission:
     skill:
         "*": deny
         "guideline-*": allow
+    "dwh_gp_query_run": ask
+    "dwh_ch_query_run": ask
 tools:
     task: true
     write: true
