@@ -2,6 +2,9 @@
   "$schema": "https://opencode.ai/config.json",
   "model": "ecom-deepseek/deepseek-v4.1-flash",
   "enabled_providers": ["ecom-deepseek", "ecom-glm"],
+  "experimental" : {
+    "subagent_depth": 2
+  },
   "provider": {
     "ecom-deepseek": {
       "npm": "@ai-sdk/openai-compatible",
