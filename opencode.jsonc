@@ -96,8 +96,9 @@
       "url": "https://llm-core-olap.samokat.ru/rag_rag_code_oper_smkt/mcp",
       "enabled": true,
       "oauth": false,
+      "transport" : "streamable_http",
       "headers": {
-        "x-litellm-api-key": "{env:RAG_OPERSMKT_API_KEY}"
+        "x-litellm-api-key": "Bearer {env:RAG_OPERSMKT_API_KEY}"
       }
     }
   }
