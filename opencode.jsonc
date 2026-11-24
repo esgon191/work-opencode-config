@@ -97,7 +97,7 @@
       "enabled": true,
       "oauth": false,
       "headers": {
-        "x-litellm-api-key": "{env:LITELLM_API_KEY}"
+        "x-litellm-api-key": "{env:RAG_OPERSMKT_API_KEY}"
       }
     }
   }
