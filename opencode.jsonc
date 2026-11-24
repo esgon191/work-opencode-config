@@ -1,6 +1,7 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model" : "ecom/deepseek-v4.1-flash",
+  "model": "ecom-deepseek/deepseek-v4.1-flash",
+  "enabled_providers": ["ecom-deepseek", "ecom-glm"],
   "provider": {
     "ecom-deepseek": {
       "npm": "@ai-sdk/openai-compatible",
@@ -15,8 +16,6 @@
         }
       }
     },
-//  },
-//  "provider": {
     "ecom-glm": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "ecom/glm",

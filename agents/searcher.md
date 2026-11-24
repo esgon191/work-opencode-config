@@ -1,7 +1,7 @@
 ---
 description: Хранитель знаний об источниках данных, формулах метрик и их скриптах. Отвечает, откуда брать какие данные, какие к ним применять фильтры, группировки. Код самостоятельно не пишет и запросы не выполняет.
 mode: subagent
-model: ecom/deepseek-v4.1-flash
+model: ecom-deepseek/deepseek-v4.1-flash
 temprature: 0.1
 permission:
     skill:

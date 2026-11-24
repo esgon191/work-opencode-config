@@ -1,7 +1,7 @@
 ---
 description: Писатель скриптов, кода, ноутбуков. Знает гайдлайны написания и умеет тестировать, оптимизировать запросы и выгружать данные (с разрешения пользователя)
 mode: subagent
-model: ecom/deepseek-v4.1-flash
+model: ecom-deepseek/deepseek-v4.1-flash
 temprature: 0.1
 permission:
     task:
