@@ -63,6 +63,7 @@
     // DWH
     // Greenplum
     "dwh_gp_query_run" : "ask",
+    "dwh_gp_export" : "ask",
     "dwh_gp_query_test" : "allow",
     "dwh_gp_table_ddl" : "allow",
     "dwh_gp_schema_tables" : "allow",
@@ -70,6 +71,7 @@
     //
     // Clickhouse
     "dwh_ch_query_run" : "ask",
+    "dwh_ch_export" : "ask",
     "dwh_ch_query_test" : "allow",
     "dwh_ch_table_ddl" : "allow",
     "dwh_ch_schema_tables" : "allow",
